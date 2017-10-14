@@ -1,0 +1,9 @@
+-# in app/views/movies/show.html.haml
+
+%h2 Similar Movies page for #{@movie.title}
+
+
+= Movie.where(director: @movie.director).inspect
+
+= link_to 'Back', movie_path
+
